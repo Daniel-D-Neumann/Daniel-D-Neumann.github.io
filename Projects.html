@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Dopetrope by HTML5 UP</title>
+		<title>Daniel Neumann</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -68,13 +68,13 @@
 						<article class="box post">
 							<a href="#" class="image featured"><img src="" alt="" /></a>
 							<header>
-								<h2>Going Under - Python:</h2>
+								<h2>Going Under - Python</h2>
 							</header>
 							<p>
 								This is a project I worked on during college over a period of four months. 
 								It was my first experience with creating games and with a lot of time and effort, 
-								I built a game from the ground up in python using pygame, a GUI library. 
-								I focused on creating: Efficient data structures, of which, a recursive quadtree to handle collisions is what I'm most proud of. 
+								I built a game from the ground up in python using pygame, a GUI library. <br>
+								I focused on creating:<br> Efficient data structures, of which, a recursive quadtree to handle collisions is what I'm most proud of. 
 								Procedural content generation in a similar fashion to spelunky, one of my favorite games. 
 								And a declarative menu system, that made me feel like I was using my own engine. 
 							</p>
@@ -84,12 +84,12 @@
 							<p>
 								There are two game modes, classic and endless, both see the player navigating around procedurally generated levels,
 								created using a seed that can be set by the player or randomly generated, 
-								collecting treasure, killing enemies, avoiding traps, climbing ladders and ropes, and blowing stuff up! 
+								collecting treasure, killing enemies, avoiding traps, climbing ladders and ropes, and blowing stuff up! <br>
 								In classic mode after completing 5 levels the player will face a final boss to end the game, 
 								but endless features unlimited levels where the player is only stopped by their own skill, 
-								encouraging them to reach new high-scores every time they play. 
+								encouraging them to reach new high-scores every time they play. <br>
 								After each run the player may unlock several buffs that they can pick from the next time they start a run,
-								and have the ability to have multiple saved profiles each with different progress and high-scores. 
+								and have the ability to have multiple saved profiles each with different progress and high-scores. <br>
 								With all these cool features the game can get pretty overwhelming so I also included a save/load feature,
 								so a player can put down the game and come back later right where they left off.
 							</p>
@@ -98,7 +98,7 @@
 							</header>
 							<p>
 								Unfortunately, despite this being my first and most memorable coding project, this has fallen to the wayside. 
-								With my transition to uni meaning I've switched my main language to c++, 
+								With my transition to uni meaning I've switched my main language to c++, <br>
 								I've instead decided to recreate this project in c++,
 								and any future developments will likely be applied to that version instead of this one.
 							</p>
@@ -121,11 +121,38 @@
 						<article class="box post">
 							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
 							<header>
-								<h2>Intro</h2>
+								<h2>Going Under - C++</h2>
 							</header>
 							<p>
-								Below are some projects I have worked on and am currently working on. They aim to evidence my skills, 
-								while also taking some pride in my accomplishments.
+								This project is a continuation of my previous project Going Under in python, 
+								the aim of this was to help me make the transition to c++ with code I am intimately familiar with, 
+								and the goal is to catch up to where I left off with the python version so that I can continue to 
+								make and implement new features.
+							</p>
+							<header>
+								<h3>What's new?</h3>
+							</header>
+							<p>
+								C++ allows for direct memory management unlike pythons,
+								and so I've been working on methods to optimise my games memory usage, 
+								such as the use of things like object pools so I don't need to keep creating and destroying objects.<br>
+								I've also explored some new functionality for previoius mechanics such as the use of ENUMs for various states in the game like animation.
+								With some advice from my uni lecturers I've also implemented new and more efficient methods for various things, 
+								like sprite sheets rather than seperate images.
+							</p>
+							<header>
+								<h3>The future of this project:</h3>
+							</header>
+							<p>
+								I plan to reach the standard my python version is at and once there, continue to make more and more improvements, 
+								and implementing new mechanics to explore and adapt my knowledge of c++ and games.
+								It would also be nice to make the game feel more unique to me with less inspiration from games I've played.
+							</p>
+							<header>
+								<h3>TLDR:</h3>
+							</header>
+							<p>
+								A rebuild of the python version to help me learn c++.
 							</p>
 						</article>
 
@@ -140,11 +167,41 @@
 						<article class="box post">
 							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
 							<header>
-								<h2>Intro</h2>
+								<h2>Marble Madness</h2>
 							</header>
 							<p>
-								Below are some projects I have worked on and am currently working on. They aim to evidence my skills, 
-								while also taking some pride in my accomplishments.
+								Marble Madness is a unity built prototype given to me as an assignment by my university to advance and develop.
+								I worked on this for a few weeks before switching my focus to my Going Under - C++ project.
+							</p>
+							<header>
+								<h3>What improvements have I made</h3>
+							</header>
+							<p>
+								On top of the movement and simple mechanics like a 'bounce pad' that were already in the prototype,
+								I've added:<br> Collectables to give the player score and encourage exploration of the levels. 
+								A 'pop-up block' with an indicator when the block is about to pop up, launching the player away from the object. 
+								This can be seen as an obstacle but I also experimented with using this to help the player reach areas of the level,
+								that would otherwise be unaccessible, bringing a new sense of verticality and puzzles to the game.
+								And finally I added floor that only appears when the player gets close. 
+								This works well with the collectables as they can be used to show where hidden paths may be and vice versa.<br>
+								To show my mechanics I made several additional levels for the game that push the boundaries of the mechanics I made,
+								as well as the mechancis already in place, to showcase them in the fullest and help spark new fresh ideas for future improvements.
+							</p>
+							<header>
+								<h3>The future of this project:</h3>
+							</header>
+							<p>
+								As of now I have no future plans for this project, it was a good launch point for starting my career in unity, 
+								but I have a greater interest in other projects, including several others in unity. <br>
+								Building on top of this framework was interesting, but I'd prefer to have an good understanding of how to build my own frameworks 
+								from the ground up so that I can better use unity and push anything new I make to it's highest level. 
+								Whether that be improving current systems or fashioning my own.
+							</p>
+							<header>
+								<h3>TLDR:</h3>
+							</header>
+							<p>
+								My entry point to unity by adapting a framework over a few weeks.
 							</p>
 						</article>
 
