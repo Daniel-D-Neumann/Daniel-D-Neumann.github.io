@@ -83,8 +83,9 @@ input, select, textarea {
 	}
 
 	body {
-		background: #252122;
-		background-image: url("images/bg02.png");
+		/*background: #e53359;*/
+		background-image: url("../../images/bg02.png");
+		/*background-size:cover;*/
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -2179,8 +2180,8 @@ input, select, textarea {
 		background-repeat: no-repeat;
 		text-align: center;
 		position: relative;
-		padding: 8em 0;
-		margin: 4em 0 0 0;
+		padding: 10em 0;
+		margin: 6em 0 0 0;
 	}
 
 /* Intro */
@@ -2263,6 +2264,53 @@ input, select, textarea {
 		#main .major h2 {
 			background: #f7f7f7 url("images/bg02.png");
 		}
+/* Intro2 */
+
+#intro2 {
+	position: relative;
+	background: #f7f7f7 url("images/bg02.png");
+	padding: 4em 0 4em 0;
+}
+
+	#intro2:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: url("images/bg01.png");
+		background-size: 100% 100%;
+		z-index: 0;
+		opacity: 0.1;
+	}
+
+	#intro2 .major h2 {
+		background: #f7f7f7 url("images/bg02.png");
+	}
+
+/* GUP */
+
+#GUP {
+	position: relative;
+	background: #f7f7f7 url("images/bg02.png");
+	padding: 4em 0 4em 0;
+}
+
+	#GUP:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: url("images/bg01.png");
+		background-size: 100% 100%;
+		z-index: 0;
+		opacity: 0.1;
+	}
+
+	#GUP .major h2 {
+		background: #f7f7f7 url("images/bg02.png");
+	}
 
 /* Footer */
 
