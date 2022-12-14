@@ -2288,15 +2288,39 @@ input, select, textarea {
 		background: #f7f7f7 url("images/bg02.png");
 	}
 
-/* GUP */
+/* GUP */Intro2
 
 #GUP {
+	position: relative;
+	background: #f7f7f7 url("");
+	padding: 4em 0 4em 0;
+}
+
+	#GUP:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: url("");
+		background-size: 100% 100%;
+		z-index: 0;
+		opacity: 0.1;
+	}
+
+	#GUP .major h2 {
+		background: #f7f7f7 url("");
+	}
+
+/* GUC */Intro2
+
+#GUC {
 	position: relative;
 	background: #f7f7f7 url("images/bg02.png");
 	padding: 4em 0 4em 0;
 }
 
-	#GUP:before {
+	#GUC:before {
 		content: '';
 		position: absolute;
 		top: 0;
@@ -2308,7 +2332,31 @@ input, select, textarea {
 		opacity: 0.1;
 	}
 
-	#GUP .major h2 {
+	#GUC .major h2 {
+		background: #f7f7f7 url("images/bg02.png");
+	}
+
+/* MM */Intro2
+
+#MM {
+	position: relative;
+	background: #f7f7f7 url("images/bg02.png");
+	padding: 4em 0 4em 0;
+}
+
+	#MM:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: url("images/bg01.png");
+		background-size: 100% 100%;
+		z-index: 0;
+		opacity: 0.1;
+	}
+
+	#MM .major h2 {
 		background: #f7f7f7 url("images/bg02.png");
 	}
 
