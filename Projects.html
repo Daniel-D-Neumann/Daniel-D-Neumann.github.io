@@ -15,105 +15,187 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<section id="header">
+			<section id="header">
 
-					<!-- Logo -->
-						<h1><a href="index.html">Daniel Neumann</a></h1>
+				<!-- Logo -->
+				<h1><a href="index.html">Daniel Neumann</a></h1>
 
-					<!-- Nav -->
-						<nav id="nav">
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li>
+							<a href="#">Navigate</a>
 							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li>
-									<a href="#">Navigate</a>
-									<ul>
-										<li><a href="#intro2">Intro</a></li>
-										<li><a href="#GUP">Going Under - Python</a></li>
-										<li><a href="#GUC">Going Under - C++</a></li>
-										<li><a href="#MM">Marble Madness</a></li>
-										<li><a href="#LL">Bloon Survivors</a></li>
-										<li><a href="#BT">Back Track</a></li>
-										<li><a href="#socials">Socials</a></li>
-									</ul>
-								<li><a href="AboutMe.html">About Me</a></li>
-								<li><a href="Skills.html">Skills</a></li>
-								<li class="current"><a href="Projects.html">Projects</a></li>
+								<li><a href="#intro2">Intro</a></li>
+								<li><a href="#MGP">Online Multiplayer Pong</a></li>
+								<li><a href="#Graphics">Graphics Showcase</a></li>
+								<li><a href="#GUP">Going Under - Python</a></li>
+								<li><a href="#GUC">Going Under - C++</a></li>
+								<li><a href="#MM">Marble Madness</a></li>
+								<li><a href="#LL">Bloon Survivors</a></li>
+								<li><a href="#BT">Back Track</a></li>
+								<li><a href="#socials">Socials</a></li>
 							</ul>
-						</nav>
+						<li><a href="AboutMe.html">About Me</a></li>
+						<li><a href="Skills.html">Skills</a></li>
+						<li class="current"><a href="Projects.html">Projects</a></li>
+					</ul>
+				</nav>
 
-				</section>
+			</section>
 
 			<!-- intro2 -->
-				<section id="intro2">
-					<div class="container">
+			<section id="intro2">
+				<div class="container">
 
-						<!-- Content -->
-							<article class="box post">
-								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-								<header>
-									<h2>Intro</h2>
-								</header>
-								<p>
-									Below are some projects I have worked on and am currently working on. They aim to evidence my skills, 
-									while also taking some pride in my accomplishments.
-								</p>
-							</article>
+					<!-- Content -->
+					<article class="box post">
+						<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+						<header>
+							<h2>Intro</h2>
+						</header>
+						<p>
+							Below are some projects I have worked on and am currently working on. They aim to evidence my skills,
+							while also taking some pride in my accomplishments.
+						</p>
+					</article>
 
-					</div>
-				</section>
+				</div>
+			</section>
+
+			<!-- MGP -->
+			<section id="MGP">
+				<div class="container">
+					<!-- Content -->
+					<article class="box post">
+						<a href="#" class="image featured"><img src="" alt="" /></a>
+						<p style="text-align:center;"><img src="images/MGPExample.png" alt="" /></p>
+						<header>
+							<h2>Online Multiplayer Pong</h2>
+						</header>
+						<p>
+							This project is a concurrent network application that allows for several users on a network to connect with each other to play games of pong. <br>
+							Building from the non networked version of pong I created:
+							<br> A networked hierarchy consisting of a main server, which handled several gameplay servers and connected clients onto those severs,
+							which in turn would handle connected clients playing their games of pong. It makes use of threads and tasks in c# to be able to achieve this synchronously.
+							<br>The program can send encrypted data over the network using both UDP and TCP methods,
+							to ensure data arrives securely and fast enough to convince users they are playing the same game despite being on seperate devices.
+							This data is also replicated to all connected clients in the lobby so that what one user sees is the same as the other users see.
+							<br>The program is server authorative, meaning the clients are simply playing a service provided by the server which
+							helps prevent cheating via a client sending false data. The program will also close down gracefully on both the server and client side,
+							preventing crashes for both and ensuring connections are terminated correctly before closure.
+						</p>
+						<header>
+							<h3>What skills have I gained from this?</h3>
+						</header>
+						<p>
+							I learnt the fundamentals of network programming as well as how to use threads efficiently and safely to create networked programs in c#.<br>
+							I learnt the difference between the communication methods of TCP and UDP and where it is best to use them.<br>
+							I learnt the importance of security and how to ensure data I send over the network is sent securely.<br>
+							I learnt how to synchronise games over networks to ensure multiple players experience the same thing.<br>
+						</p>
+						<header>
+							<h3>TLDR:</h3>
+						</header>
+						<p>
+							A Concurrent network application in c#. Using multiple servers, communicating securely and efficiently, to allow clients to play pong.
+						</p>
+					</article>
+
+				</div>
+			</section>
+
+			<!-- Graphics -->
+
+			<section id="Graphics">
+				<div class="container">
+					<!-- Content -->
+					<article class="box post">
+						<a href="#" class="image featured"><img src="" alt="" /></a>
+						<p style="text-align:center;"><img src="images/GraphicsExample.png" alt="" /></p>
+						<header>
+							<h2>DirectX Graphics Simulation</h2>
+						</header>
+						<p>
+							This project was to showcase my ability to create efficient graphical effects in a real time application. It was made in DirectX11,
+							and displays the following methods:<br>
+							-	Manual Object Creation<br>
+							-	Phong Shading Model<br>
+							-	Object Texturing and specular mapping<br>
+							-	Loading object data using JSON<br>
+							-	Debug Fly Camera<br>
+							-	Skybox<br>
+							-	Alpha Blending / clipping, including transparency and fog<br>
+							-	Billboarding<br>
+							-	Terrain Generation<br>
+							-	Picking<br>
+							It creates all these effects in real time, with a high framerate and the debug fly camera allows a user to navigate the scene
+							and get a greater visual of all these effects taking place.
+						</p>
+						<header>
+							<h3>TLDR:</h3>
+						</header>
+						<p>
+							A Graphics simulation in DX11 to showcase my ability to create and perform several graphical effects in a real-time application.
+						</p>
+					</article>
+
+				</div>
+			</section>
 
 			<!-- GUP -->
 			<section id="GUP">
 				<div class="container">
 
 					<!-- Content -->
-						<article class="box post">
-							<a href="#" class="image featured"><img src="" alt="" /></a>
-							<p style="text-align:center;"><img src="images/GoingUnderPy - Copy.png" alt=""/></p>
-							<header>
-								<h2>Going Under - Python</h2>
-							</header>
-							<p>
-								This is a project I worked on during college over a period of four months. 
-								It was my first experience with creating games and with a lot of time and effort, 
-								I built a game from the ground up in python using pygame, a GUI library. <br>
-								I focused on creating:<br> Efficient data structures, of which, a recursive quadtree to handle collisions is what I'm most proud of. 
-								Procedural content generation in a similar fashion to spelunky, one of my favorite games. 
-								And a declarative menu system, that made me feel like I was using my own engine. 
-							</p>
-							<header>
-								<h3>What's the game like?</h3>
-							</header>
-							<p>
-								There are two game modes, classic and endless, both see the player navigating around procedurally generated levels,
-								created using a seed that can be set by the player or randomly generated, 
-								collecting treasure, killing enemies, avoiding traps, climbing ladders and ropes, and blowing stuff up! <br>
-								In classic mode after completing 5 levels the player will face a final boss to end the game, 
-								but endless features unlimited levels where the player is only stopped by their own skill, 
-								encouraging them to reach new high-scores every time they play. <br>
-								After each run the player may unlock several buffs that they can pick from the next time they start a run,
-								and have the ability to have multiple saved profiles each with different progress and high-scores. <br>
-								With all these cool features the game can get pretty overwhelming so I also included a save/load feature,
-								so a player can put down the game and come back later right where they left off.
-							</p>
-							<header>
-								<h3>The future of this project:</h3>
-							</header>
-							<p>
-								Unfortunately, despite this being my first and most memorable coding project, this has fallen to the wayside. 
-								With my transition to uni meaning I've switched my main language to c++, <br>
-								I've instead decided to recreate this project in c++,
-								and any future developments will likely be applied to that version instead of this one.
-							</p>
-							<header>
-								<h3>TLDR:</h3>
-							</header>
-							<p>
-								A finished games project in python, with self-built data structures, PCG and declaritive built menus.
-							</p>
-							<p style="text-align:center;"><img src="images/GU - Example.png" alt="" /></p>
+					<article class="box post">
+						<a href="#" class="image featured"><img src="" alt="" /></a>
+						<p style="text-align:center;"><img src="images/GoingUnderPy - Copy.png" alt="" /></p>
+						<header>
+							<h2>Going Under - Python</h2>
+						</header>
+						<p>
+							This is a project I worked on during college over a period of four months.
+							It was my first experience with creating games and with a lot of time and effort,
+							I built a game from the ground up in python using pygame, a GUI library. <br>
+							I focused on creating:<br> Efficient data structures, of which, a recursive quadtree to handle collisions is what I'm most proud of.
+							Procedural content generation in a similar fashion to spelunky, one of my favorite games.
+							And a declarative menu system, that made me feel like I was using my own engine.
+						</p>
+						<header>
+							<h3>What's the game like?</h3>
+						</header>
+						<p>
+							There are two game modes, classic and endless, both see the player navigating around procedurally generated levels,
+							created using a seed that can be set by the player or randomly generated,
+							collecting treasure, killing enemies, avoiding traps, climbing ladders and ropes, and blowing stuff up! <br>
+							In classic mode after completing 5 levels the player will face a final boss to end the game,
+							but endless features unlimited levels where the player is only stopped by their own skill,
+							encouraging them to reach new high-scores every time they play. <br>
+							After each run the player may unlock several buffs that they can pick from the next time they start a run,
+							and have the ability to have multiple saved profiles each with different progress and high-scores. <br>
+							With all these cool features the game can get pretty overwhelming so I also included a save/load feature,
+							so a player can put down the game and come back later right where they left off.
+						</p>
+						<header>
+							<h3>The future of this project:</h3>
+						</header>
+						<p>
+							Unfortunately, despite this being my first and most memorable coding project, this has fallen to the wayside.
+							With my transition to uni meaning I've switched my main language to c++, <br>
+							I've instead decided to recreate this project in c++,
+							and any future developments will likely be applied to that version instead of this one.
+						</p>
+						<header>
+							<h3>TLDR:</h3>
+						</header>
+						<p>
+							A finished games project in python, with self-built data structures, PCG and declaritive built menus.
+						</p>
+						<p style="text-align:center;"><img src="images/GU - Example.png" alt="" /></p>
 
-						</article>
+					</article>
 
 				</div>
 			</section>
@@ -123,44 +205,44 @@
 				<div class="container">
 
 					<!-- Content -->
-						<article class="box post">
-							<a href="#" class="image featured"><img src="" alt="" /></a>
-							<p style="text-align:center;"><img src="images/GoingUnderC - Copy.png" alt="" /></p>
-							<header>
-								<h2>Going Under - C++</h2>
-							</header>
-							<p>
-								This project is a continuation of my previous project Going Under in python, 
-								the aim of this was to help me make the transition to c++ with code I am intimately familiar with, 
-								and the goal is to catch up to where I left off with the python version so that I can continue to 
-								make and implement new features.
-							</p>
-							<header>
-								<h3>What's new?</h3>
-							</header>
-							<p>
-								C++ allows for direct memory management unlike pythons,
-								and so I've been working on methods to optimise my games memory usage, 
-								such as the use of things like object pools so I don't need to keep creating and destroying objects.<br>
-								I've also explored some new functionality for previoius mechanics such as the use of ENUMs for various states in the game like animation.
-								With some advice from my uni lecturers I've also implemented new and more efficient methods for various things, 
-								like sprite sheets rather than seperate images.
-							</p>
-							<header>
-								<h3>The future of this project:</h3>
-							</header>
-							<p>
-								After some work the game is now at the same standard as my python project. 
-								I've recently done some research into cyclic procedural content generation methods and I am interested to see if I could find a way
-								to apply this to this project, that is my current goal.
-							</p>
-							<header>
-								<h3>TLDR:</h3>
-							</header>
-							<p>
-								A rebuild of the python version to help me learn c++, now being updated instead of the python version.
-							</p>
-						</article>
+					<article class="box post">
+						<a href="#" class="image featured"><img src="" alt="" /></a>
+						<p style="text-align:center;"><img src="images/GoingUnderC - Copy.png" alt="" /></p>
+						<header>
+							<h2>Going Under - C++</h2>
+						</header>
+						<p>
+							This project is a continuation of my previous project Going Under in python,
+							the aim of this was to help me make the transition to c++ with code I am intimately familiar with,
+							and the goal is to catch up to where I left off with the python version so that I can continue to
+							make and implement new features.
+						</p>
+						<header>
+							<h3>What's new?</h3>
+						</header>
+						<p>
+							C++ allows for direct memory management unlike pythons,
+							and so I've been working on methods to optimise my games memory usage,
+							such as the use of things like object pools so I don't need to keep creating and destroying objects.<br>
+							I've also explored some new functionality for previoius mechanics such as the use of ENUMs for various states in the game like animation.
+							With some advice from my uni lecturers I've also implemented new and more efficient methods for various things,
+							like sprite sheets rather than seperate images.
+						</p>
+						<header>
+							<h3>The future of this project:</h3>
+						</header>
+						<p>
+							After some work the game is now at the same standard as my python project.
+							I've recently done some research into cyclic procedural content generation methods and I am interested to see if I could find a way
+							to apply this to this project, that is my current goal.
+						</p>
+						<header>
+							<h3>TLDR:</h3>
+						</header>
+						<p>
+							A rebuild of the python version to help me learn c++, now being updated instead of the python version.
+						</p>
+					</article>
 
 				</div>
 			</section>
@@ -170,48 +252,48 @@
 				<div class="container">
 
 					<!-- Content -->
-						<article class="box post">
-							<a href="#" class="image featured"><img src="" alt="" /></a>
-							<p style="text-align:center;"><img src="images/MarbleMadness - Copy.jpg" alt="" width = auto /></p>
-							<header>
-								<h2>Marble Madness</h2>
-							</header>
-							<p>
-								Marble Madness is a unity built prototype given to me as an assignment by my university to advance and develop.
-								I worked on this for a few weeks.
-							</p>
-							<header>
-								<h3>What improvements have I made?</h3>
-							</header>
-							<p>
-								On top of the movement and simple mechanics like a 'bounce pad' that were already in the prototype,
-								I've added:<br> Collectables to give the player score and encourage exploration of the levels. 
-								A 'pop-up block' with an indicator when the block is about to pop up, launching the player away from the object. 
-								This can be seen as an obstacle but I also experimented with using this to help the player reach areas of the level,
-								that would otherwise be unaccessible, bringing a new sense of verticality and puzzles to the game.
-								And finally I added floor that only appears when the player gets close. 
-								This works well with the collectables as they can be used to show where hidden paths may be and vice versa.<br>
-								To show my mechanics I made several additional levels for the game that push the boundaries of the mechanics I made,
-								as well as the mechancis already in place, to showcase them in the fullest and help spark new fresh ideas for future improvements.
-							</p>
-							<header>
-								<h3>The future of this project:</h3>
-							</header>
-							<p>
-								As of now I have no future plans for this project, it was a good launch point for starting my career in unity, 
-								but I have a greater interest in other projects, such as my current project Bloon Survivors. <br>
-								Building on top of this framework was interesting, but I'd prefer to have an good understanding of how to build my own frameworks 
-								from the ground up so that I can better use unity and push anything new I make to it's highest level. 
-								Whether that be improving current systems or fashioning my own.
-							</p>
-							<header>
-								<h3>TLDR:</h3>
-							</header>
-							<p>
-								My entry point to unity by adapting a framework over a few weeks.
-							</p>
-							<p style="text-align:center;"><img src="images/MM-Example.png" alt="" /></p>
-						</article>
+					<article class="box post">
+						<a href="#" class="image featured"><img src="" alt="" /></a>
+						<p style="text-align:center;"><img src="images/MarbleMadness - Copy.jpg" alt="" width=auto /></p>
+						<header>
+							<h2>Marble Madness</h2>
+						</header>
+						<p>
+							Marble Madness is a unity built prototype given to me as an assignment by my university to advance and develop.
+							I worked on this for a few weeks.
+						</p>
+						<header>
+							<h3>What improvements have I made?</h3>
+						</header>
+						<p>
+							On top of the movement and simple mechanics like a 'bounce pad' that were already in the prototype,
+							I've added:<br> Collectables to give the player score and encourage exploration of the levels.
+							A 'pop-up block' with an indicator when the block is about to pop up, launching the player away from the object.
+							This can be seen as an obstacle but I also experimented with using this to help the player reach areas of the level,
+							that would otherwise be unaccessible, bringing a new sense of verticality and puzzles to the game.
+							And finally I added floor that only appears when the player gets close.
+							This works well with the collectables as they can be used to show where hidden paths may be and vice versa.<br>
+							To show my mechanics I made several additional levels for the game that push the boundaries of the mechanics I made,
+							as well as the mechancis already in place, to showcase them in the fullest and help spark new fresh ideas for future improvements.
+						</p>
+						<header>
+							<h3>The future of this project:</h3>
+						</header>
+						<p>
+							As of now I have no future plans for this project, it was a good launch point for starting my career in unity,
+							but I have a greater interest in other projects, such as my current project Bloon Survivors. <br>
+							Building on top of this framework was interesting, but I'd prefer to have an good understanding of how to build my own frameworks
+							from the ground up so that I can better use unity and push anything new I make to it's highest level.
+							Whether that be improving current systems or fashioning my own.
+						</p>
+						<header>
+							<h3>TLDR:</h3>
+						</header>
+						<p>
+							My entry point to unity by adapting a framework over a few weeks.
+						</p>
+						<p style="text-align:center;"><img src="images/MM-Example.png" alt="" /></p>
+					</article>
 
 				</div>
 			</section>
@@ -221,50 +303,50 @@
 				<div class="container">
 
 					<!-- Content -->
-						<article class="box post">
-							<a href="#" class="image featured"><img src="" alt="" /></a>
-							<p style="text-align:center;"><img src="images/VampireBloons - Copy.png" alt="" /></p>
-							<header>
-								<h2>Bloon Survivors</h2>
-							</header>
-							<p>
-								Bloon Survivors is a unity built 2D prototype. It is designed around the franchise Bloons and the game Vampire Survivors.
-								Taking inspiration from both to combine into an fun concept.
-								I worked on this for a week and this is the result.
-							</p>
-							<header>
-								<h3>Where it started:</h3>
-							</header>
-							<p>
-								The prototype initially only had functionality for basic character control, 
-								but also included a tile palette for basic backgrounds, walls and decorations.
-							</p>
-							<header>
-								<h3>Where it's at:</h3>
-							</header>
-							<p>
-								I implemented an enemy spawning system, which slowly ramps up the difficulty of the enemies over time. 
-								I added an automatic ability that shoots at these enemies like in vampire survivors.
-								And upgrades to that ability that fit in the bloons theme. There are also some basic sound effects.
-								<br> Here's a video showcasing the game at it's current state
-								<p style="text-align:center;"><video source width = 500 height = 250 src="images/TDS-Vid.mp4" tpye="video/mp4" controls></video></p>
-							</p>
-							<header>
-								<h3>The future of this project:</h3>
-							</header>
-							<p>
-								This project has a lot of potential. As of now it is only a rudimentary prototype, but has the potential to be much more.
-								There is the potential to finish the upgrades for the current character, 
-								but there is also the possibility of adding several more characters from the bloons franchise with their unique abilities and upgrades.
-								I aim to also make progress savable so the player can have some sort of meta progression throughout their runs of the game.
-							</p>
-							<header>
-								<h3>TLDR:</h3>
-							</header>
-							<p>
-								My current in progress Unity project, a reverse Bullet-Hell with the Bloons theme.
-							</p>
-						</article>
+					<article class="box post">
+						<a href="#" class="image featured"><img src="" alt="" /></a>
+						<p style="text-align:center;"><img src="images/VampireBloons - Copy.png" alt="" /></p>
+						<header>
+							<h2>Bloon Survivors</h2>
+						</header>
+						<p>
+							Bloon Survivors is a unity built 2D prototype. It is designed around the franchise Bloons and the game Vampire Survivors.
+							Taking inspiration from both to combine into an fun concept.
+							I worked on this for a week and this is the result.
+						</p>
+						<header>
+							<h3>Where it started:</h3>
+						</header>
+						<p>
+							The prototype initially only had functionality for basic character control,
+							but also included a tile palette for basic backgrounds, walls and decorations.
+						</p>
+						<header>
+							<h3>Where it's at:</h3>
+						</header>
+						<p>
+							I implemented an enemy spawning system, which slowly ramps up the difficulty of the enemies over time.
+							I added an automatic ability that shoots at these enemies like in vampire survivors.
+							And upgrades to that ability that fit in the bloons theme. There are also some basic sound effects.
+							<br> Here's a video showcasing the game at it's current state
+						<p style="text-align:center;"><video source width=500 height=250 src="images/TDS-Vid.mp4" tpye="video/mp4" controls></video></p>
+						</p>
+						<header>
+							<h3>The future of this project:</h3>
+						</header>
+						<p>
+							This project has a lot of potential. As of now it is only a rudimentary prototype, but has the potential to be much more.
+							There is the potential to finish the upgrades for the current character,
+							but there is also the possibility of adding several more characters from the bloons franchise with their unique abilities and upgrades.
+							I aim to also make progress savable so the player can have some sort of meta progression throughout their runs of the game.
+						</p>
+						<header>
+							<h3>TLDR:</h3>
+						</header>
+						<p>
+							My current in progress Unity project, a reverse Bullet-Hell with the Bloons theme.
+						</p>
+					</article>
 
 				</div>
 			</section>
@@ -274,52 +356,52 @@
 				<div class="container">
 
 					<!-- Content -->
-						<article class="box post">
-							<a href="#" class="image featured"><img src="" alt="" /></a>
-							<p style="text-align:center;"><img src="images/GGJSplash - Copy.png" alt="" /></p>
-							<header>
-								<h2>Back Track</h2>
-							</header>
-							<p>
-								Back Track was a collaborative project between me and a couple of friends where over 48 hours we made a game in unity
-								based on the theme "roots".
-							</p>
-							<header>
-								<h3>How it went:</h3>
-							</header>
-							<p>
-								We successfully made a short puzzle game, where the player could "root" themselves in time to create a clone that
-								could help them, press buttons flip switches and boost the player around the level.
-							</p>
-							<header>
-								<h3>Where to find it:</h3>
-							</header>
-							<p>
-								You can access the game through the global games jam website or from the github repo here:<br>
-								<a href="https://github.com/Daniel-D-Neumann/Global-Games-Jam">Back Track </a>
-							</p>
-							<header>
-								<h3>The future of this project:</h3>
-							</header>
-							<p>
-								There are no current plans to adapt this project, but it would be an easy one to get back in to
-								due to its simple nature.
-							</p>
-							<header>
-								<h3>TLDR:</h3>
-							</header>
-							<p>
-								My Global Games Jam project.
-							</p>
-							<header>
-								<h3>Collaborators:</h3>
-							</header>
-							<p>
-								<a href="https:://sageekpang.github.io">Sage Ekpang</a><br>
-								<a href="https:://seanrtan.github.io">Sean Tan</a>
-							</p>
-							<p style="text-align:center;"><img src="images/BT - Example.png" alt="" /></p>
-						</article>
+					<article class="box post">
+						<a href="#" class="image featured"><img src="" alt="" /></a>
+						<p style="text-align:center;"><img src="images/GGJSplash - Copy.png" alt="" /></p>
+						<header>
+							<h2>Back Track</h2>
+						</header>
+						<p>
+							Back Track was a collaborative project between me and a couple of friends where over 48 hours we made a game in unity
+							based on the theme "roots".
+						</p>
+						<header>
+							<h3>How it went:</h3>
+						</header>
+						<p>
+							We successfully made a short puzzle game, where the player could "root" themselves in time to create a clone that
+							could help them, press buttons flip switches and boost the player around the level.
+						</p>
+						<header>
+							<h3>Where to find it:</h3>
+						</header>
+						<p>
+							You can access the game through the global games jam website or from the github repo here:<br>
+							<a href="https://github.com/Daniel-D-Neumann/Global-Games-Jam">Back Track </a>
+						</p>
+						<header>
+							<h3>The future of this project:</h3>
+						</header>
+						<p>
+							There are no current plans to adapt this project, but it would be an easy one to get back in to
+							due to its simple nature.
+						</p>
+						<header>
+							<h3>TLDR:</h3>
+						</header>
+						<p>
+							My Global Games Jam project.
+						</p>
+						<header>
+							<h3>Collaborators:</h3>
+						</header>
+						<p>
+							<a href="https:://sageekpang.github.io">Sage Ekpang</a><br>
+							<a href="https:://seanrtan.github.io">Sean Tan</a>
+						</p>
+						<p style="text-align:center;"><img src="images/BT - Example.png" alt="" /></p>
+					</article>
 
 				</div>
 			</section>
