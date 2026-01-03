@@ -28,13 +28,13 @@
 							<a href="#">Navigate</a>
 							<ul>
 								<li><a href="#intro2">Intro</a></li>
+								<li><a href="#LLPO">Low Level Platform Optimisation</a></li>
+								<li><a href="#CS">Crab Sticks</a></li>
+								<li><a href ="CAI">Chess AI</a></li>
 								<li><a href="#MGP">Online Multiplayer Pong</a></li>
 								<li><a href="#Graphics">Graphics Showcase</a></li>
 								<li><a href="#GUP">Going Under - Python</a></li>
 								<li><a href="#GUC">Going Under - C++</a></li>
-								<li><a href="#MM">Marble Madness</a></li>
-								<li><a href="#LL">Bloon Survivors</a></li>
-								<li><a href="#BT">Back Track</a></li>
 								<li><a href="#socials">Socials</a></li>
 							</ul>
 						<li><a href="AboutMe.html">About Me</a></li>
@@ -58,6 +58,128 @@
 						<p>
 							Below are some projects I have worked on and am currently working on. They aim to evidence my skills,
 							while also taking some pride in my accomplishments.
+						</p>
+					</article>
+
+				</div>
+			</section>
+
+
+			<!-- LLPO -->
+			<section id="LLPO">
+				<div class="container">
+					<!-- Content -->
+					<article class="box post">
+						<a href="#" class="image featured"><img src="" alt="" /></a>
+						<p style="text-align:center;"><img src="images/LLPO-Example.png" alt="" /></p>
+						<header>
+							<h2>Low Level Platform Optimisation</h2>
+						</header>
+						<p>
+							This project is an optimisation of a simple physics simulation with cubes and spheres, as well as porting it to run on a PS5. <br>
+							Building from the provided simulation which could only handle around 1000 objects I profiled the program to identify the bottlenecks and improved it to handle over 80000 objects at 60 FPS.
+							<br> For memory optimisations I implemented memory trackers / canaries which allowed me to walk the heap to look for memory corruption and errors,
+							 which were vital for helping make the more complex memory management techniques. 
+							 Memory Pools which allowed for faster memory allocation and deallocation than standard,
+							 as well as ensuring a contiguous memory layout for data structures to help prevent cache misses.
+							 Finally, I implemented a per frame Arena Allocator, this is extremely helpful as it detatches an objects lifetime from its new and delete call,
+							 anything dynamically allocated during a frame is allocated to the arena. 
+							 Then at the start of a new frame the arena is reset so the memory assigned to it is freed automatically without the programmer needing to worry about it.
+							 Longer lifetime memory can still be assigned to the memory pool of course.
+							<br> For timing optimisations I implemented a simple Octree for collision handling to greatly reduce the number of collisions the original O(n^2) algorithm was performing. 
+							I also implemented thread pooling which worked nicely with my octrees regions to parallelise collision calculations, 
+							and learnt some valuable lessons about naievly throwing threads at problems.
+							Finally, I implemented SIMD instructions to greatly increase the speed of all the vector math being performed by the collision code.
+							<br> I was also tasked with porting the original simulation onto a PS5. This was a daunting task due to working with unfimiliar architecture and a foreign SDK. 
+							Undeterred by these problems I successfully created a cross platform version of the program that would run on either PS5 or windows automatically, 
+							which utilised platform specific threading code to help improve the performance of the program along with some basic spatial partitioning.
+						</p>
+						<header>
+							<h3>What skills have I gained from this?</h3>
+						</header>
+						<p>
+							I have learnt how a computer works at a much lower level and with a much greater understanding than previously.<br>
+							I know how to profile a program and create the necessary tools to improve efficiency, identify bottle necks, and find memory leaks.<br>
+							I've experienced working with different architectures and learnt important lessons in writing cross platform code.<br>
+							I've improved writing and implementing thread safe code to improve program performance.<br>
+						</p>
+						<header>
+							<h3>TLDR:</h3>
+						</header>
+						<p>
+							A physics simulation, optimised to be 80x better than the original and ported onto a PS5.
+						</p>
+					</article>
+
+				</div>
+			</section>
+
+			<!-- Crab Sticks -->
+			<section id="CS">
+				<div class="container">
+					<!-- Content -->
+					<article class="box post">
+						<a href="#" class="image featured"><img src="" alt="" /></a>
+						<p style="text-align:center;"><img src="images/CrabSticksExample.png" alt="" /></p>
+						<header>
+							<h2>Crab Sticks</h2>
+						</header>
+						<p>
+							Programmer for the TIGA award nominee for student built game Crab Sticks. <br>
+							A fun party game involving ball games, crabs and sticks. Going from nothing to release ready in just 2 months.
+							<br> While not the most technical of games and built in Unreal Engine meaning most of the project was created using blueprints over raw C++,
+							working in a large team to create crab sticks came with different challenges to working solo.
+							<br> My communication skills were required and improved throughout the lifetime of the project. Not only by tackling bugs together on the programming team. 
+							Talks between the crossed disciplines of us the programmers, designers, and artists happened frequently to help make their vision possible on the back end of the game we created.
+							This clear communication was critical and allowed us to meet the 2 month deadline with a release ready game.
+							<br> Working with like-minded dedicated individuals, helped spark my passion for creating games and solidified my goal of being able to do the same thing in industry.
+							Working with my peers to create a masterpiece I can be proud of.
+						</p>
+						<header>
+							<h3>What skills have I gained from this?</h3>
+						</header>
+						<p>
+							My communication and teamwork skills have improved dramatically. A weekend game jam doesn't require half as much coordination as a full 2 month project does.<br>
+							I have improved my skills in UE5 allowing me improved workflow and more efficient blueprints than previous.<br>
+							Some new hard working friends!<br>
+						</p>
+						<p style="text-align:center;"><video source width=500 height=250 src="images/CrabSticksVideo.mp4" tpye="video/mp4" controls></video></p>
+						<header>
+							<h3>TLDR:</h3>
+						</header>
+						<p>
+							Student made game in 2 months for which I programmed.
+						</p>
+					</article>
+
+				</div>
+			</section>
+
+			<!-- Chess AI -->
+			<section id="CAI">
+				<div class="container">
+					<!-- Content -->
+					<article class="box post">
+						<a href="#" class="image featured"><img src="" alt="" /></a>
+						<p style="text-align:center;"><img src="images/ChessAIImage.png" alt="" /></p>
+						<header>
+							<h2>Chess AI</h2>
+						</header>
+						<p>
+							My current project. Creating a chess AI. <br>
+							A deep dive into chess engines and an attempt to create my own.
+							<br> Creating a chess AI comes with a plethora of challenges. Namely that there are more permuatations of the game than there are stars in the universe. 
+							Therefore trying to create a perfect AI runs into the problem that there isn't enough time in our lifetimes to calculate the perfect move each turn in chess.
+							<br> The solution is adversarial search algorithms like Mini-Max or variants of it like Nega-Max, but these require you to score the board in order to tell the AI 
+							which moves are going to help it win. This is a lengthy challenge in itself.
+							<br> Additionally checking all the possible board states even for just a few moves ahead is very costly and so optimisations for doing this are what I'm currently looking into,
+							 mainly bitboards with magic bitboards for sliding pieces to help reduce the time taken to choose a move and hence possibly look more moves ahead in a reasonable time.
+						</p>
+						<header>
+							<h3>TLDR:</h3>
+						</header>
+						<p>
+							Chess AI. My current project.
 						</p>
 					</article>
 
@@ -242,165 +364,6 @@
 						<p>
 							A rebuild of the python version to help me learn c++, now being updated instead of the python version.
 						</p>
-					</article>
-
-				</div>
-			</section>
-
-			<!-- MM -->
-			<section id="MM">
-				<div class="container">
-
-					<!-- Content -->
-					<article class="box post">
-						<a href="#" class="image featured"><img src="" alt="" /></a>
-						<p style="text-align:center;"><img src="images/MarbleMadness - Copy.jpg" alt="" width=auto /></p>
-						<header>
-							<h2>Marble Madness</h2>
-						</header>
-						<p>
-							Marble Madness is a unity built prototype given to me as an assignment by my university to advance and develop.
-							I worked on this for a few weeks.
-						</p>
-						<header>
-							<h3>What improvements have I made?</h3>
-						</header>
-						<p>
-							On top of the movement and simple mechanics like a 'bounce pad' that were already in the prototype,
-							I've added:<br> Collectables to give the player score and encourage exploration of the levels.
-							A 'pop-up block' with an indicator when the block is about to pop up, launching the player away from the object.
-							This can be seen as an obstacle but I also experimented with using this to help the player reach areas of the level,
-							that would otherwise be unaccessible, bringing a new sense of verticality and puzzles to the game.
-							And finally I added floor that only appears when the player gets close.
-							This works well with the collectables as they can be used to show where hidden paths may be and vice versa.<br>
-							To show my mechanics I made several additional levels for the game that push the boundaries of the mechanics I made,
-							as well as the mechancis already in place, to showcase them in the fullest and help spark new fresh ideas for future improvements.
-						</p>
-						<header>
-							<h3>The future of this project:</h3>
-						</header>
-						<p>
-							As of now I have no future plans for this project, it was a good launch point for starting my career in unity,
-							but I have a greater interest in other projects, such as my current project Bloon Survivors. <br>
-							Building on top of this framework was interesting, but I'd prefer to have an good understanding of how to build my own frameworks
-							from the ground up so that I can better use unity and push anything new I make to it's highest level.
-							Whether that be improving current systems or fashioning my own.
-						</p>
-						<header>
-							<h3>TLDR:</h3>
-						</header>
-						<p>
-							My entry point to unity by adapting a framework over a few weeks.
-						</p>
-						<p style="text-align:center;"><img src="images/MM-Example.png" alt="" /></p>
-					</article>
-
-				</div>
-			</section>
-
-			<!-- LL -->
-			<section id="LL">
-				<div class="container">
-
-					<!-- Content -->
-					<article class="box post">
-						<a href="#" class="image featured"><img src="" alt="" /></a>
-						<p style="text-align:center;"><img src="images/VampireBloons - Copy.png" alt="" /></p>
-						<header>
-							<h2>Bloon Survivors</h2>
-						</header>
-						<p>
-							Bloon Survivors is a unity built 2D prototype. It is designed around the franchise Bloons and the game Vampire Survivors.
-							Taking inspiration from both to combine into an fun concept.
-							I worked on this for a week and this is the result.
-						</p>
-						<header>
-							<h3>Where it started:</h3>
-						</header>
-						<p>
-							The prototype initially only had functionality for basic character control,
-							but also included a tile palette for basic backgrounds, walls and decorations.
-						</p>
-						<header>
-							<h3>Where it's at:</h3>
-						</header>
-						<p>
-							I implemented an enemy spawning system, which slowly ramps up the difficulty of the enemies over time.
-							I added an automatic ability that shoots at these enemies like in vampire survivors.
-							And upgrades to that ability that fit in the bloons theme. There are also some basic sound effects.
-							<br> Here's a video showcasing the game at it's current state
-						<p style="text-align:center;"><video source width=500 height=250 src="images/TDS-Vid.mp4" tpye="video/mp4" controls></video></p>
-						</p>
-						<header>
-							<h3>The future of this project:</h3>
-						</header>
-						<p>
-							This project has a lot of potential. As of now it is only a rudimentary prototype, but has the potential to be much more.
-							There is the potential to finish the upgrades for the current character,
-							but there is also the possibility of adding several more characters from the bloons franchise with their unique abilities and upgrades.
-							I aim to also make progress savable so the player can have some sort of meta progression throughout their runs of the game.
-						</p>
-						<header>
-							<h3>TLDR:</h3>
-						</header>
-						<p>
-							My current in progress Unity project, a reverse Bullet-Hell with the Bloons theme.
-						</p>
-					</article>
-
-				</div>
-			</section>
-
-			<!-- BT -->
-			<section id="BT">
-				<div class="container">
-
-					<!-- Content -->
-					<article class="box post">
-						<a href="#" class="image featured"><img src="" alt="" /></a>
-						<p style="text-align:center;"><img src="images/GGJSplash - Copy.png" alt="" /></p>
-						<header>
-							<h2>Back Track</h2>
-						</header>
-						<p>
-							Back Track was a collaborative project between me and a couple of friends where over 48 hours we made a game in unity
-							based on the theme "roots".
-						</p>
-						<header>
-							<h3>How it went:</h3>
-						</header>
-						<p>
-							We successfully made a short puzzle game, where the player could "root" themselves in time to create a clone that
-							could help them, press buttons flip switches and boost the player around the level.
-						</p>
-						<header>
-							<h3>Where to find it:</h3>
-						</header>
-						<p>
-							You can access the game through the global games jam website or from the github repo here:<br>
-							<a href="https://github.com/Daniel-D-Neumann/Global-Games-Jam">Back Track </a>
-						</p>
-						<header>
-							<h3>The future of this project:</h3>
-						</header>
-						<p>
-							There are no current plans to adapt this project, but it would be an easy one to get back in to
-							due to its simple nature.
-						</p>
-						<header>
-							<h3>TLDR:</h3>
-						</header>
-						<p>
-							My Global Games Jam project.
-						</p>
-						<header>
-							<h3>Collaborators:</h3>
-						</header>
-						<p>
-							<a href="https:://sageekpang.github.io">Sage Ekpang</a><br>
-							<a href="https:://seanrtan.github.io">Sean Tan</a>
-						</p>
-						<p style="text-align:center;"><img src="images/BT - Example.png" alt="" /></p>
 					</article>
 
 				</div>
