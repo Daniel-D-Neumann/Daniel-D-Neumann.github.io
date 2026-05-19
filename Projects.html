@@ -28,9 +28,9 @@
 							<a href="#">Navigate</a>
 							<ul>
 								<li><a href="#intro2">Intro</a></li>
-								<li><a href="#LLPO">Low Level Platform Optimisation</a></li>
 								<li><a href="#CS">Crab Sticks</a></li>
-								<li><a href ="CAI">Chess AI</a></li>
+								<li><a href="#LLPO">Low Level Platform Optimisation</a></li>
+								<li><a href ="#CPED">Chess AI</a></li>
 								<li><a href="#MGP">Online Multiplayer Pong</a></li>
 								<li><a href="#Graphics">Graphics Showcase</a></li>
 								<li><a href="#GUP">Going Under - Python</a></li>
@@ -64,6 +64,96 @@
 				</div>
 			</section>
 
+			<!-- Crab Sticks -->
+			<section id="CS">
+				<div class="container">
+					<!-- Content -->
+					<article class="box post">
+						<a href="#" class="image featured"><img src="" alt="" /></a>
+						<p style="text-align:center;"><img src="images/CrabSticksExample.png" alt="" /></p>
+						<header>
+							<h2>Crab Sticks</h2>
+						</header>
+						<p>
+							I was a programmer for the TIGA award nominee for student built game Crab Sticks. <br>
+							A fun party game involving ball games, crabs and sticks. Going from nothing to release ready in just 2 months.
+							<br> While not the most technical of games and built in Unreal Engine meaning most of the project was created using blueprints over raw C++,
+							working in a large team to create Crab Sticks came with different challenges to working solo.
+							<br> I was mainly responsible for the UI for the game, though I worked on various gameplay aspects and bugs where needed. 
+							As, I hadn't previously worked with Unreals CommonUI plugin this was a great learning experience for me.
+							<br> My communication skills were required and improved throughout the lifetime of the project. Not only by tackling bugs together on the programming team. 
+							Talks between the disciplines of programmers, designers, and artists happened frequently to help make the vision for the game possible through the back end of the game we created.
+							This clear communication was critical and allowed us to meet the 2 month deadline with a release ready game.
+							<br> Working with like-minded dedicated individuals, helped spark my passion for creating games and solidified my goal of being able to do the same thing in industry.
+							Working with my peers to create a masterpiece I can be proud of.
+						</p>
+						<header>
+							<h3>What skills have I gained from this?</h3>
+						</header>
+						<p>
+							My communication and teamwork skills have improved dramatically. A weekend game jam doesn't require half as much coordination as a full 2 month project does.<br>
+							I have improved my skills in UE5 allowing me improved workflow and more efficient blueprints than previous.<br>
+							Some new hard working friends!<br>
+						</p>
+						<p style="text-align:center;"><video source width=500 height=250 src="images/CrabSticksVideo.mp4" tpye="video/mp4" controls></video></p>
+						<header>
+							<h3>TLDR:</h3>
+						</header>
+						<p>
+							Student made game in 2 months for which I programmed.
+						</p>
+					</article>
+
+				</div>
+			</section>
+
+						<!-- Cross Platform Engine Development -->
+			<section id="CPED">
+				<div class="container">
+					<!-- Content -->
+					<article class="box post">
+						<a href="#" class="image featured"><img src="" alt="" /></a>
+						<p style="text-align:center;"><img src="images/Quackworks_logo.png" alt="" /></p>
+						<header>
+							<h2>Cross Platform Engine Development</h2>
+						</header>
+						<p>
+							Alongside 3 fellow students we built our own 2D cross-platform compatible engine called Quackworks in C++ to aid in the creation of games. Using our engine we made a basic replica of Duck Game.<br>
+							<p style="text-align:center;"><img src="images/Quackworks.png" alt="" /></p><br>
+							With help from our Object-Component system the engine allowed for easy window creation, input handling, local multiplayer, and audio playing and creation. 
+							Additionally, with the help of our Object-Component system inspired by Unity, you can create game objects that will be rendered to the screen and simulate physics as a user wishes.<br>
+							My main area of work in the codebase was the math & physics system, inspired by Box2D. 
+							It is an isolated, deterministic and platform agnostic system, that efficiently handles rigid bodies and colliders.<br><br>
+							The main part I am proud of is the handling of collisions in the system. I implemented a modified version of GJK & EPA that works in 2D meaning the engine can accurately handle collisions 
+							between any convex user defined shapes, not limiting them to pre-defined ones. 
+							This, while a great addition to the engine cause major headaches getting it working, mainly stemming from the fact that in 2D the cross product doesn't really exist, but it is a crucial part of
+							As the cross product between any two 2D vectors e.g. (0,1), (1,0), will always find the perpendicular vector to be one in the third dimension e.g. (0,0,1) which doesn't work in our 2D world! 
+							Figuring out how to circumvent this issue was a major rollercoaster.
+							Additionally for the broad phase collisions I implemented an incremental bounding volume hierarchy tree to take collisions from a time complexity of O(n^2) to O(n * log(n)). 
+							This also ran into a pretty major issue.
+							<a href = "GEC-Collisions.html"> You can read more about the implemenetation and the issues faced here</a><br>
+							Other optimisations I made were batched SIMD operations where possible as well as providing the architecture to multithread slow areas of the system. 
+							Unfortunately, due to the time constraint I didn't manage to get multithreading working in time, but may go back and give it a better go when I have the free time to do so.
+							Other physics areas like continuous collision detection or constraint solving are also areas that were planned but I didn't have the time for.<br><br>
+
+							Throughout the course of this, not only were my technical skills put to work, but so were my people skills. 
+							Keeping everyone on task and up to date with each others work was crucial for both knowledge of the code base but also team morale, 
+							as it can be really hard working away at systems for prolonged periods of time without clear visualisations of the progress that has been made from this work.
+							To help with this, I kept living documentation inside our Github repo that grew as the features that I added to the project did.
+							This was really helpful for the group and made it really easy for them to use the physics system I built and integrate it with the rest of the engine easily, 
+							and is something I'd definitely do again when working on any decently large codebase.
+
+						</p>
+						<header>
+							<h3>TLDR:</h3>
+						</header>
+						<p>
+							A C++ 2D Game Engine built by me and 3 other programmers in 8 weeks. I built the physics system.
+						</p>
+					</article>
+
+				</div>
+			</section>
 
 			<!-- LLPO -->
 			<section id="LLPO">
@@ -103,83 +193,12 @@
 							I've experienced working with different architectures and learnt important lessons in writing cross platform code.<br>
 							I've improved writing and implementing thread safe code to improve program performance.<br>
 						</p>
+						<p style="text-align:center;"><video source width=500 height=250 src="images/LLPO-Showcase.mkv" tpye="video/mp4" controls></video></p>
 						<header>
 							<h3>TLDR:</h3>
 						</header>
 						<p>
 							A physics simulation, optimised to be 80x better than the original and ported onto a PS5.
-						</p>
-					</article>
-
-				</div>
-			</section>
-
-			<!-- Crab Sticks -->
-			<section id="CS">
-				<div class="container">
-					<!-- Content -->
-					<article class="box post">
-						<a href="#" class="image featured"><img src="" alt="" /></a>
-						<p style="text-align:center;"><img src="images/CrabSticksExample.png" alt="" /></p>
-						<header>
-							<h2>Crab Sticks</h2>
-						</header>
-						<p>
-							Programmer for the TIGA award nominee for student built game Crab Sticks. <br>
-							A fun party game involving ball games, crabs and sticks. Going from nothing to release ready in just 2 months.
-							<br> While not the most technical of games and built in Unreal Engine meaning most of the project was created using blueprints over raw C++,
-							working in a large team to create crab sticks came with different challenges to working solo.
-							<br> My communication skills were required and improved throughout the lifetime of the project. Not only by tackling bugs together on the programming team. 
-							Talks between the crossed disciplines of us the programmers, designers, and artists happened frequently to help make their vision possible on the back end of the game we created.
-							This clear communication was critical and allowed us to meet the 2 month deadline with a release ready game.
-							<br> Working with like-minded dedicated individuals, helped spark my passion for creating games and solidified my goal of being able to do the same thing in industry.
-							Working with my peers to create a masterpiece I can be proud of.
-						</p>
-						<header>
-							<h3>What skills have I gained from this?</h3>
-						</header>
-						<p>
-							My communication and teamwork skills have improved dramatically. A weekend game jam doesn't require half as much coordination as a full 2 month project does.<br>
-							I have improved my skills in UE5 allowing me improved workflow and more efficient blueprints than previous.<br>
-							Some new hard working friends!<br>
-						</p>
-						<p style="text-align:center;"><video source width=500 height=250 src="images/CrabSticksVideo.mp4" tpye="video/mp4" controls></video></p>
-						<header>
-							<h3>TLDR:</h3>
-						</header>
-						<p>
-							Student made game in 2 months for which I programmed.
-						</p>
-					</article>
-
-				</div>
-			</section>
-
-			<!-- Chess AI -->
-			<section id="CAI">
-				<div class="container">
-					<!-- Content -->
-					<article class="box post">
-						<a href="#" class="image featured"><img src="" alt="" /></a>
-						<p style="text-align:center;"><img src="images/ChessAIImage.png" alt="" /></p>
-						<header>
-							<h2>Chess AI</h2>
-						</header>
-						<p>
-							My current project. Creating a chess AI. <br>
-							A deep dive into chess engines and an attempt to create my own.
-							<br> Creating a chess AI comes with a plethora of challenges. Namely that there are more permuatations of the game than there are stars in the universe. 
-							Therefore trying to create a perfect AI runs into the problem that there isn't enough time in our lifetimes to calculate the perfect move each turn in chess.
-							<br> The solution is adversarial search algorithms like Mini-Max or variants of it like Nega-Max, but these require you to score the board in order to tell the AI 
-							which moves are going to help it win. This is a lengthy challenge in itself.
-							<br> Additionally checking all the possible board states even for just a few moves ahead is very costly and so optimisations for doing this are what I'm currently looking into,
-							 mainly bitboards with magic bitboards for sliding pieces to help reduce the time taken to choose a move and hence possibly look more moves ahead in a reasonable time.
-						</p>
-						<header>
-							<h3>TLDR:</h3>
-						</header>
-						<p>
-							Chess AI. My current project.
 						</p>
 					</article>
 
