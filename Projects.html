@@ -29,8 +29,9 @@
 							<ul>
 								<li><a href="#intro2">Intro</a></li>
 								<li><a href="#CS">Crab Sticks</a></li>
+								<li><a href="#PAG">Procedural Audio Generator</a></li>
 								<li><a href="#LLPO">Low Level Platform Optimisation</a></li>
-								<li><a href ="#CPED">Chess AI</a></li>
+								<li><a href ="#CPED">Cross Platform Engine Development</a></li>
 								<li><a href="#MGP">Online Multiplayer Pong</a></li>
 								<li><a href="#Graphics">Graphics Showcase</a></li>
 								<li><a href="#GUP">Going Under - Python</a></li>
@@ -101,6 +102,53 @@
 						</header>
 						<p>
 							Student made game in 2 months for which I programmed.
+						</p>
+					</article>
+
+				</div>
+			</section>
+
+			<!-- Crab Sticks -->
+			<section id="PAG">
+				<div class="container">
+					<!-- Content -->
+					<article class="box post">
+						<a href="#" class="image featured"><img src="" alt="" /></a>
+						<p style="text-align:center;"><img src="images/PAG.jpg" alt="" /></p>
+						<header>
+							<h2>Procedural Audio Generator</h2>
+						</header>
+						<p>
+							For my dissertation project I decided I wanted to investigate methods of procedurally generating audio. 
+							Procedural generation has been a fascinating topic for me, 
+							stemming from my love of rogue-lites and their use of procedural generation to create games that are never the same each time you play them.
+							Now most uses of procedural gneration are pretty solved, or can be solved with a bit of elbow grease. 
+							From procedurally generating a single plant, to procedurally generating entire worlds. 
+							These work well as the rules for the generation are only as complex as you need to make them, or use randomness like noise to help inspire how the generation can take place.
+							While I've seen many games make use of procedural generation to aid in the development of games, I've seen much less the case where games use procedural audio to help make games. 
+							Perhaps this is due to music being a much more complex piece of data than what is usually worked with. 
+							There are less hard rules for what sounds good with music as it can be a very subjective matter. 
+							The aim of my dissertation, therefore, was to discover why exactly procedural audio isn't used, 
+							and to see if I could create some procedural audio that could prove it would be usefeul. <br><br>
+							<a href = "assets/PAG/Dissertation_Final.pdf" >For a full breakdown of my research you can read my dissertation from here.</a><br><br>
+							My resulting code can take either a MIDI file, or a custom RTTTL style format with which to analyse pre-existing music. 
+							Then using a Markov chain, it generates self-similar music to the input and outputs it as a .wav file, of any desired length, that can be played back or possibly used in other applications.
+							I found this method to be effective, with very little runtime computational cost. At least for single-layered instrument generation. 
+							The generation does accomodate multi-layered generation, but with how Markov Chains work, the re-created audio from this is greatly diminished in quality, 
+							and not suitable for use in outside applications.<br><br>
+							Here is a piece of generated music using the Minecraft music as the input. <br>
+							<p style="text-align: center;"><audio controls> <source src = "assets/PAG/MyGeneratedWavFile.wav" type = "audio/wav"></audio></p><br><br>
+							From this work I've made a huge leap forwards in self-disciplined research, project management, and knowledge in computer audio. <br><br>
+							I'm currently working on improving this project while job-hunting, with the two main areas of improvement being; 
+							researching and implementing context-aware Markov chains to allow for multi-layered instruments, and hence much richer sounding music to be generated, 
+							and using the Fourier Transform to create better sounding instruments, or dynamic instruments, to play-back the music with. <br><br>
+							<a href="https://github.com/Daniel-D-Neumann/GradEx/tree/main"> The full project can be seen on my Github here</a>
+						</p>
+						<header>
+							<h3>TLDR:</h3>
+						</header>
+						<p>
+							My ongoing procedural audio generator built for my dissertation project.
 						</p>
 					</article>
 
